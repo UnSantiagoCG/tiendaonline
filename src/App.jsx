@@ -71,7 +71,7 @@ function App() {
             <div key={product.id} className="product-card">
               <div className="product-image-container" style={{ overflow: 'hidden', height: '280px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fdfdfd' }}>
                 {product.page ? (
-                  <img src={`/images/${product.page}.jpg`} alt={product.name} className="product-image" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = '/placeholder.jpg'; }} />
+                  <img src={`./images/${product.page}.jpg`} alt={product.name} className="product-image" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = './placeholder.jpg'; }} />
                 ) : (
                   <img src={product.image} alt={product.name} className="product-image" loading="lazy" />
                 )}
@@ -122,7 +122,7 @@ function App() {
               <div key={item.id} className="cart-item">
                 <div style={{width: '60px', height: '60px', overflow: 'hidden', borderRadius: '8px', flexShrink: 0}}>
                   {item.page ? (
-                     <img src={`/images/${item.page}.jpg`} alt={item.name} className="cart-item-img" style={{width: '100%', height: '100%', objectFit: 'cover'}} onError={(e) => { e.target.onerror = null; e.target.src = '/placeholder.jpg'; }} />
+                     <img src={`./images/${item.page}.jpg`} alt={item.name} className="cart-item-img" style={{width: '100%', height: '100%', objectFit: 'cover'}} onError={(e) => { e.target.onerror = null; e.target.src = './placeholder.jpg'; }} />
                   ) : (
                      <img src={item.image} alt={item.name} className="cart-item-img" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                   )}
